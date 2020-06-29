@@ -8,9 +8,6 @@ public class Square extends Rectangle {
 
     public Square(String color, boolean isFilled, double width) throws IllegalArgumentException {
         super(color, isFilled, width, width);
-        if (width <= 0) {
-            throw new IllegalArgumentException("Width must be greater than zero.");
-        }
         this.width = width;
     }
 
@@ -23,17 +20,6 @@ public class Square extends Rectangle {
     public void setWidth(double width) { this.width = width; }
 
     //methods
-    @Override
-    public double getArea() {
-        double area = this.width * this.width;
-        return area;
-    }
-
-    @Override
-    public double getPerimeter() {
-        double perimeter = 4 * this.width;
-        return perimeter;
-    }
 
     @Override
     public String toString() {
