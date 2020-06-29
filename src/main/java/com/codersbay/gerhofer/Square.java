@@ -1,14 +1,13 @@
 package com.codersbay.gerhofer;
 
-public class Square extends Shape {
+public class Square extends Rectangle {
 
     private double width;
 
     //constructor, getter and setter
 
-
-    public Square(String color, boolean isFilled, double width) {
-        super(color, isFilled);
+    public Square(String color, boolean isFilled, double width) throws IllegalArgumentException {
+        super(color, isFilled, width, width);
         if (width <= 0) {
             throw new IllegalArgumentException("Width must be greater than zero.");
         }

@@ -4,35 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Circles:");
-        Shape circle1 = new Circle("green", true, 3);
-        Shape circle2 = new Circle("orange", true, 6);
-        Shape circle3 = new Circle("red", false, 7);
+        Shape pacman = new Circle("yellow", true, 3);
+        System.out.printf("The circle has the following parameters: \n Color: %s \n isFilled: %b \n Radius: %f \n", pacman.getColor(), pacman.isFilled(), ((Circle) pacman).getRadius());
+        System.out.printf("It has an area of %f and a perimeter of %f.", pacman.getArea(), pacman.getPerimeter());
 
-        System.out.println("The area of the green circle is : " + circle1.getArea());
-        System.out.println("The area of the orange circle is : " + circle2.getArea());
-        System.out.println("The perimeter of the orange circle is : " + circle2.getPerimeter());
-        System.out.println("The perimeter of the red circle is : " + circle3.getPerimeter());
+        Shape blockser = new Rectangle("green", true, 5, 7);
+        System.out.printf("The rectangle has the following parameters: \n Color: %s \n isFilled: %b \n Width: %f \n Length: %f \n", blockser.getColor(), blockser.isFilled(), ((Rectangle) blockser).getWidth(), ((Rectangle) blockser).getLength());
+        System.out.printf("It has an area of %f and a perimeter of %f.", blockser.getArea(), blockser.getPerimeter());
 
-        System.out.println("Rectangles:");
-        Shape rectangle1 = new Rectangle("green", false, 3, 7);
-        Shape rectangle2 = new Rectangle("orange", true, 6, 9);
-        Shape rectangle3 = new Rectangle("red", true, 7, 4);
+        Shape cubert = new Square("red", true, 6);
+        System.out.printf("The square has the following parameters: \n Color: %s \n isFilled: %b \n Width: %f \n", cubert.getColor(), cubert.isFilled(), ((Square) cubert).getWidth());
+        System.out.printf("It has an area of %f and a perimeter of %f.", cubert.getArea(), cubert.getPerimeter());
 
-        System.out.println("The area of the green rectangle is : " + rectangle1.getArea());
-        System.out.println("The area of the orange rectangle is : " + rectangle2.getArea());
-        System.out.println("The perimeter of the orange rectangle is : " + rectangle2.getPerimeter());
-        System.out.println("The perimeter of the red rectangle is : " + rectangle3.getPerimeter());
-
-        System.out.println("Squares:");
-        Shape square1 = new Square("green", true, 8);
-        Shape square2 = new Square("orange", false, 4);
-        Shape square3 = new Square("red", false, 2);
-
-        System.out.println("The area of the green square is : " + square1.getArea());
-        System.out.println("The area of the orange square is : " + square2.getArea());
-        System.out.println("The perimeter of the orange square is : " + square2.getPerimeter());
-        System.out.println("The perimeter of the red square is : " + square3.getPerimeter());
     }
 
 }
